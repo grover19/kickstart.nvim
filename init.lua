@@ -35,7 +35,7 @@ Kickstart Guide:
 If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
 
 I hope you enjoy your Neovim journey,
-- TJ
+- TJ :)
 --]]
 
 -- Set <space> as the leader key
@@ -59,7 +59,7 @@ vim.g.have_nerd_font = true
 
 -- Make line numbers default
 vim.o.number = true
--- vim.o.relativenumber = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
