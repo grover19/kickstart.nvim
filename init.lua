@@ -210,7 +210,14 @@ require('lazy').setup({
     priority = 1000,
     config = function()
       require('onedarkpro').setup {
-        lsp_semantic_tokens = true,
+        options = {
+          transparency = true,
+          lsp_semantic_tokens = true,
+        },
+        highlights = {
+          CursorLineNr = { bg = 'NONE' },
+          CursorLine = { bg = 'NONE' },
+        },
       }
       vim.cmd 'colorscheme onedark_dark'
     end,
