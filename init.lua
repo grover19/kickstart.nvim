@@ -49,7 +49,7 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
-vim.opt.fillchars:append { eob = ' ' }
+vim.opt.fillchars = { eob = ' ', vert = '█' }
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
@@ -206,7 +206,6 @@ rtp:prepend(lazypath)
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- setting colorscheme, hopefully compatible with modern neovim
   {
     'olimorris/onedarkpro.nvim',
     priority = 1000,
