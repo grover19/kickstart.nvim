@@ -6,7 +6,6 @@ return {
   'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
-  ---@type snacks.Config
   opts = {
     -- your configuration comes here
     -- or leave it empty to use the default settings
@@ -24,4 +23,8 @@ return {
     statuscolumn = { enabled = true },
     words = { enabled = true },
   },
+  config = function(_, opts)
+    require('snacks').setup(opts)
+    vim.api.nvim_set_hl(0, 'SnacksDashboardHeader', { fg = '#1E90FF' })
+  end,
 }
