@@ -163,6 +163,12 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
+-- Indent/unindent with Tab
+vim.keymap.set('n', '<Tab>', '>>', { desc = 'Indent line' })
+vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Unindent line' })
+vim.keymap.set('v', '<Tab>', '>gv', { desc = 'Indent selection' })
+vim.keymap.set('v', '<S-Tab>', '<gv', { desc = 'Unindent selection' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -214,7 +220,8 @@ require('lazy').setup({
           lsp_semantic_tokens = true,
         },
         highlights = {
-          CursorLineNr = { bg = 'NONE' },
+          CursorLineNr = { bg = 'NONE', fg = '#4D93FF' },
+          LineNr = { fg = '#8F9696' },
           CursorLine = { bg = 'NONE' },
           Visual = { bg = 'grey' },
         },
