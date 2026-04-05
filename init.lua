@@ -49,6 +49,8 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
+vim.opt.fillchars = { eob = ' ' }
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
@@ -220,8 +222,8 @@ require('lazy').setup({
           lsp_semantic_tokens = true,
         },
         highlights = {
-          CursorLineNr = { bg = 'NONE', fg = '#4D93FF' },
-          LineNr = { fg = '#8F9696' },
+          CursorLineNr = { bg = 'NONE', fg = '#4D93FF', italic = true },
+          LineNr = { fg = '#555555' },
           CursorLine = { bg = 'NONE' },
           Visual = { bg = 'grey' },
         },
@@ -696,7 +698,7 @@ require('lazy').setup({
                 callSnippet = 'Replace',
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              diagnostics = { disable = { 'missing-fields' } },
             },
           },
         },
